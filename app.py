@@ -15,6 +15,10 @@ os.environ["CUDA_VISIBLE_DEVICES"]="-1"
 
 app = flask.Flask(__name__)
 
+@app.route("/")
+def index():
+    return "Welcome to X-ray covid-19 detection service"
+
 @app.route("/alive", methods=["GET"])
 def alive_endpoint():
     js={"message":"Server is alive!"}
