@@ -16,6 +16,6 @@ def test_predict():
     assert model.predict(loaded_img)[0][0]
     
 
-img = "NORMAL.png"
+img = "NORMAL.jpg"
 model = load_model(f'../model.h5')
 test_predict()
