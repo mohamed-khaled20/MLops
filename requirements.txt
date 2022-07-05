@@ -9,3 +9,4 @@ numpy==1.23.0
 python_magic==0.4.27
 tensorflow==2.9.1
 matplotlib
+seaborn
