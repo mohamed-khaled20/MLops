@@ -1,4 +1,4 @@
-# MLops
+# MLops - API
 
 This is a simple API for Covid-19 detection based on x-ray image
 
