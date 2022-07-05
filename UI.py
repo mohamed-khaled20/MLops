@@ -5,6 +5,8 @@ import seaborn as sns
 
 from PIL import Image
 
+URL = "https://khaled-covid19-mlops.herokuapp.com"
+
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title("X-ray covid-19 detection service")
@@ -23,7 +25,7 @@ if file_up:
     start_button = start_button_col1.button('Start Classification')
 
     if start_button:
-        res = requests.post('http://127.0.0.1:5000/predict',files={'file': file_up.getvalue()}).json()
+        res = requests.post(URL + '/predict',files={'file': file_up.getvalue()}).json()
 
         st.subheader('Result')
         ## result
