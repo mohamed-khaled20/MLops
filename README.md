@@ -34,7 +34,11 @@ This is a simple API for Covid-19 detection based on x-ray image
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The main purpose of this project is to learn how to design web API for covid-19 detection based on x-ray images. API is deployed and exposed to the client on heroku.
+The main purpose of this project is to design web server for covid-19 detection based on x-ray images. Server is deployed and exposed to the client on heroku.
+
+* The server can be found in [app.py](app.py)
+* Deployment was done on [heroku](https://www.heroku.com/) since it support continous deployment by providing the option to link the app to specific github repo
+* Server can be found [https://khaled-covid19-mlops.herokuapp.com](https://khaled-covid19-mlops.herokuapp.com)
 
 ### Built With
 
@@ -42,10 +46,11 @@ The main purpose of this project is to learn how to design web API for covid-19 
 * [requests](https://requests.readthedocs.io/)
 * [tensorflow](https://www.tensorflow.org/)
 * [Pillow](https://pillow.readthedocs.io/)
+* [Numpy](https://numpy.org/)
 
 <!-- endpoints -->
 ## Endpoints
-My server has the following endpoints:
+Server has the following endpoints:
 
 ### alive
 This endpoint aims to check if the service is up or not, and return a status code 200 in case the server is up and running.
@@ -126,5 +131,23 @@ This error can occur in two scenarios
 
 * File is not an image
 ```
-{"ERROR": "file you send is empty !!!"}
+{"ERROR": "file you send is not an image !!!"}
+```
+
+### 404
+This error occur when you try to access undefined endpoint
+```
+{"ERROR": "Not a valid endpoint, you only have /alive or /predict"}
+```
+
+### 405
+This error occur when you try to access endpoint with not allowed method
+```
+{"ERROR": "Not a valid method"}
+```
+
+### 500
+This error occur when an error is occured in server-side
+```
+{"ERROR": "Internal server error"}
 ```
