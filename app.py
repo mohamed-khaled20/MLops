@@ -50,18 +50,6 @@ def handle_errors(e):
         return {"ERROR":"Internal server error"}
 
 
-
-
-if __name__ == "__main__":
-    model = load_model('model_0.944.h5')
-    server = WSGIServer(('', 5000), app)
-    print('Server started .........')
-    server.serve_forever()
-
-
-
-
-
-
+model = load_model('model_0.944.h5')
 
 
