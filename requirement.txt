@@ -1,0 +1,8 @@
+flask
+requests
+gevent
+Werkzeug
+python_magic
+tensorflow
+pillow
+numpy
