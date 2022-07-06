@@ -8,7 +8,7 @@ from werkzeug.exceptions import HTTPException
 from gevent.pywsgi import WSGIServer
 import sys
 
-os.chdir(os.path.dirname(os.getcwd()))
+os.chdir("/home/runner/work/MLops/MLops")
 from app import app
 
 app.run(debug=True)
