@@ -19,6 +19,16 @@ def test_predict():
   res = requests.post('https://khaled-covid19-mlops.herokuapp.com/predict', files=d)
   res_code = str(res.status_code)
   assert(res_code == "200")
+  
+def test_wrong_endpoint():
+  res = requests.get('https://khaled-covid19-mlops.herokuapp.com/alives')
+  res_code = str(res.status_code)
+  assert(res_code == "404")
+  
+def test_wrong_method():
+  res = requests.post('https://khaled-covid19-mlops.herokuapp.com/alive')
+  res_code = str(res.status_code)
+  assert(res_code == "405")
 
 
 
