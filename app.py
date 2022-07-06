@@ -32,7 +32,7 @@ def predict_endpoint():
 
     check = magic.from_buffer(img,mime=True)
     if 'empty' in check:
-        abort(400,"file you send is empty !!!")
+        abort(400,"file you send is empty !!")
     elif check.split('/')[0].strip() != 'image':
         abort(400,"file you send is not an image !!!")
 
