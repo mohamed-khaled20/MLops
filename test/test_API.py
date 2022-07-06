@@ -9,8 +9,8 @@ from gevent.pywsgi import WSGIServer
 import sys
 
 def test_alive():
-  res = requests.get('https://127.0.0.1:5000')
-  res_code = str(res).split('[')[1].split(']')[0]
+  res = requests.get('https://khaled-covid19-mlops.herokuapp.com/alive')
+  res_code = json.loads(res)['code']
   assert(res_code == 200)
 
 
