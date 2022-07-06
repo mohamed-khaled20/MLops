@@ -8,7 +8,7 @@ from werkzeug.exceptions import HTTPException
 from gevent.pywsgi import WSGIServer
 import sys
 
-sys.path.insert(0,'..')
+os.chdir(os.path.dirname(os.getcwd()))
 from app import app
 
 app.run(debug=True)
