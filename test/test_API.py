@@ -16,7 +16,7 @@ def test_alive():
 def test_predict():
   img = open("NORMAL.png","rb")
   d   = {'file':img}
-  res = requests.post('https://khaled-covid19-mlops.herokuapp.com/prediction', files=d)
+  res = requests.post('https://khaled-covid19-mlops.herokuapp.com/predict', files=d)
   res_code = str(res.status_code)
   assert(res_code == "200")
 
