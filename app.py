@@ -45,13 +45,13 @@ def predict_endpoint():
 @app.errorhandler(Exception)
 def handle_errors(e):
     if (e.code==400):  ## invliad endpoint 
-        return {"ERROR":e.description}
+        return {"ERROR":e.description},400
     if (e.code==404):  ## invliad endpoint 
-        return {"ERROR":"Not a valid endpoint, you only have /alive or /predict"}
+        return {"ERROR":"Not a valid endpoint, you only have /alive or /predict"},404
     if (e.code==405):  ## invliad endpoint 
-        return {"ERROR":"Not a valid method"}
+        return {"ERROR":"Not a valid method"},405
     if (e.code==500):  ## invliad endpoint 
-        return {"ERROR":"Internal server error"}
+        return {"ERROR":"Internal server error"},500
 
 
 model = load_model('model_0.944.h5')
