@@ -6,10 +6,11 @@ import magic
 from flask import abort,jsonify
 from werkzeug.exceptions import HTTPException
 from gevent.pywsgi import WSGIServer
-from ... import app
+import sys
 
+sys.path.insert(0,'..')
+from app import app
 
-app = app.app
 app.run(debug=True)
 
 def test_alive():
