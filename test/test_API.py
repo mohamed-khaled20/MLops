@@ -4,7 +4,6 @@ import json
 import os
 import magic
 from flask import abort,jsonify
-from predict import predict
 from werkzeug.exceptions import HTTPException
 from gevent.pywsgi import WSGIServer
 from ... import app
