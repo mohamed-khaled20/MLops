@@ -10,7 +10,7 @@ import sys
 
 def test_alive():
   res = requests.get('https://khaled-covid19-mlops.herokuapp.com/alive')
-  res_code = json.loads(str(res))['code']
+  res_code = str(res.status_code)
   assert(res_code == "200")
 
 
