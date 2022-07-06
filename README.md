@@ -37,7 +37,8 @@ This is a simple API for Covid-19 detection based on x-ray image
 The main purpose of this project is to design web server for covid-19 detection based on x-ray images. Server is deployed and exposed to the client on heroku.
 
 * The server can be found in [app.py](app.py)
-* Deployment was done on [heroku](https://www.heroku.com/) since it support continous deployment by providing the option to link the app to specific github repo
+* Deployment was done on [heroku](https://www.heroku.com/) since it support continous deployment (CD) by providing the option to link the app to specific github repo
+* I designed continous integration (CI) using github action, you can find the file in ./github/workflows
 * Server can be found [https://khaled-covid19-mlops.herokuapp.com](https://khaled-covid19-mlops.herokuapp.com)
 
 ### Built With
