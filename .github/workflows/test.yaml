@@ -36,3 +36,4 @@ jobs:
         name: Test with server
         run: |
           python test/test_API.py
+          python test/test_prediction.py
