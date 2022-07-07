@@ -17,6 +17,8 @@ def test_alive():
     res = c.get('/alive')
     res_code = str(res.status_code)
     assert(res_code == "200")
+    
+test_alive()
 
 # def test_alive():
 #   res = requests.get('https://khaled-covid19-mlops.herokuapp.com/alive')
