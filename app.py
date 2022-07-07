@@ -53,7 +53,9 @@ def handle_errors(e):
     if (e.code==500):  ## invliad endpoint 
         return {"ERROR":"Internal server error"},500
 
-    
-model = load_model('model_0.944.h5')
+model_rel_path = "'model_0.944.h5'"
+model_abs_path = os.path.abspath(model_rel_path)
+
+model = load_model(model_abs_path)
 
 
