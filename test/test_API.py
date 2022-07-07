@@ -8,7 +8,7 @@ from werkzeug.exceptions import HTTPException
 from gevent.pywsgi import WSGIServer
 import sys
 
-assert(os.getcwd() == 1)
+sys.path.insert(0,"..")
 from app import app
 
 def test_alive():
