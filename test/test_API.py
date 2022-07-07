@@ -27,7 +27,7 @@ def test_wrong_endpoint():
     
 def test_wrong_method():
   with app.test_client() as c:
-    res = requests.post('/alive')
+    res = c.post('/alive')
     res_code = str(res.status_code)
     assert(res_code == "405")
 
