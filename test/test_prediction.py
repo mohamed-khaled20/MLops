@@ -17,5 +17,5 @@ def test_predict():
     
 
 img = "NORMAL.png"
-model = load_model(f'../model_0.944.h5')
+model = load_model(f'model_0.944.h5')
 test_predict()
