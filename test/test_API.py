@@ -17,7 +17,24 @@ def test_alive():
     res_code = str(res.status_code)
     assert(res_code == "200")
     
+    
+def test_wrong_endpoint():
+  with app.test_client() as c:
+    res = c.get('/alives')
+    res_code = str(res.status_code)
+    assert(res_code == "404")
+    
+    
+ def test_wrong_method():
+  with app.test_client() as c:
+    res = requests.post('alive')
+    res_code = str(res.status_code)
+    assert(res_code == "405")
+
 test_alive()
+test_wrong_endpoint()
+test_wrong_method()
+
 
 # def test_alive():
 #   res = requests.get('https://khaled-covid19-mlops.herokuapp.com/alive')
