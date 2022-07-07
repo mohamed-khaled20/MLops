@@ -14,7 +14,7 @@ from app import app
 
 def test_alive():
   with app.test_client() as c:
-    response = c.get('/alive')
+    res = c.get('/alive')
     res_code = str(res.status_code)
     assert(res_code == "200")
 
