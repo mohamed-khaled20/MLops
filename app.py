@@ -54,7 +54,6 @@ def handle_errors(e):
         return {"ERROR":"Internal server error"},500
 
     
-if __name__ == "__main__":
-    model = load_model('model_0.944.h5')
+model = load_model('model_0.944.h5')
 
 
